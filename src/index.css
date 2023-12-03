@@ -1,13 +1,130 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  margin: 5px 30px;
+}
+
+/* -----SearchBar component css----- */
+
+#inputSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#inputSearch input {
+  width: 300px;
+  height: 35px;
+  font-size: 15px;
+  padding-left: 10px;
+  margin: 10px 0px;
+  outline: none;
+  border: none;
+  outline: rgba(128, 128, 128, 0.379) 0.5px solid;
+  border-radius: 5px;
+}
+#delete-btn {
+  background-color: #ff6b6b;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+#delete-btn i {
+  color: white;
+  font-size: 18px;
+}
+
+/*---------- UserTable component css----------*/
+
+#userTable {
+  width: 100%;
+  height: auto;
+}
+#userTable table {
+  border-collapse: collapse;
+  width: 100%;
+}
+thead {
+  color: black;
+  font-size: 15px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+}
+tr {
+  border: 1px solid #ddddddf1;
+}
+th,
+td {
+  height: 54px;
+}
+#save,
+#edit,
+#delete {
+  cursor: pointer;
+  height: 32px;
+  width: 35px;
+  border-radius: 6px;
+  border: 1.8px solid rgba(128, 128, 128, 0.174);
+  background-color: white;
+  font-size: 18px;
+  margin-right: 10px;
+}
+#delete i {
+  color: red;
+}
+
+#save:hover,
+#edit:hover,
+#delete:hover {
+  background-color: rgba(221, 212, 212, 0.447);
+}
+
+.editInput {
+  width: 60%;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid rgba(128, 128, 128, 0.902);
+}
+
+.selectedRow {
+  background-color: #ccc;
+}
+/* --------pagination component css ------------*/
+
+#pagination-page {
+  margin-top: 10px;
+  display: flex;
+  justify-content: right;
+}
+#pagination-page button {
+  background-color: transparent;
+  width: auto;
+  height: auto;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1.8px solid rgba(128, 128, 128, 0.174);
+  margin-right: 10px;
+  font-weight: bold;
+}
+#pagination-page button i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+#pagination-page button.disabled {
+  color: rgb(176, 171, 171);
+}
+
+#pagination-page button.active {
+  background-color: rgb(211, 211, 211);
 }
