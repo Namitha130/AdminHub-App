@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const UserTable = ({ users, onEdit, onDelete ,onCheckboxClick, selectedUserIds, currentPage, pageSize   }) => {
+const UserTable = ({ users, onEdit, onDelete ,onCheckboxClick, selectedUserIds }) => {
   const [editableUserId, setEditableUserId] = useState(null);
   const [editedUserName, setEditedUserName] = useState("");
   const [editedUserMail, setEditedUserMail] = useState("");
